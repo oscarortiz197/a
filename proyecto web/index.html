@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="Estilo.css">
+    <link rel="stylesheet" href="Estilobox.css">
+</head>
+
+<body>
+
+
+
+    <div class="menuToggle" onclick="menuToggle();">
+    </div>
+
+    <section>
+        <video src="rina.mp4" autoplay="" muted="" loop=""></video>
+        <div class="box">
+            <div>
+                <span><video src="v.mp4" autoplay="" muted="false" loop=""></video></span>
+                <span><video src="v.mp4" autoplay="" muted="" loop=""></video></span>
+                <span><video src="v.mp4" autoplay="" muted="" loop=""></video></span>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="navigation">
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="#" onmouseenter="cambiarImagen('images/img1.jpg')">home</a>
+                </li>
+                <li>
+                    <a href="#" onmouseenter="cambiarImagen('https://source.unsplash.com/user/erondu/1600x900')">pan 1</a>
+                </li>
+                <li>
+                    <a href="#" onmouseenter="cambiarImagen('images/img3.jpg')">pan 2</a>
+                </li>
+                <li>
+                    <a href="#" onmouseenter="cambiarImagen('images/img4.jpg')">pan 3</a>
+                </li>
+                <li>
+                    <a href="#" onmouseenter="cambiarImagen('images/img5.jpg')">pan Mayoreo</a>
+                </li>
+                <li>
+                    <a href="#" onmouseenter="cambiarImagen('images/img6.jpg')">contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+
+            <img id="slider" src="https://source.unsplash.com/user/erondu/1600x900" alt="">
+        </div>
+    </div>
+
+    <script>
+        function cambiarImagen(anything) {
+            document.getElementById('slider').src = anything;
+        }
+
+        function menuToggle() {
+
+            const menuToggle = document.querySelector('.menuToggle')
+            const navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>
